@@ -6,13 +6,13 @@ import javax.persistence.GeneratedValue
 import javax.persistence.Id
 
 @Entity
-data class Country(
-    @JsonProperty val name: String,
-    @JsonProperty val capital: String,
-    @JsonProperty val population: Long,
-    @JsonProperty val area: Long,
-    @JsonProperty val continent: String,
-    @JsonProperty val neighbours: String
+class Country(
+    @JsonProperty var name: String,
+    @JsonProperty var capital: String,
+    @JsonProperty var population: Long,
+    @JsonProperty var area: Long,
+    @JsonProperty var continent: String,
+    @JsonProperty var neighbours: String
 ) {
     @Id
     @GeneratedValue

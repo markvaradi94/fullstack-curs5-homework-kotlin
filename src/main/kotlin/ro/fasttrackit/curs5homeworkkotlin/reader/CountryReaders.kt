@@ -16,7 +16,7 @@ interface CountryReader {
 @Profile("file")
 class FileCountryReader(private val fileConfig: CountryFileConfig) : CountryReader {
     override fun readCountries(): List<Country> {
-        return Files.lines(Path.of(fileConfig.getSourceFile()))
+        return Files.lines(Path.of(fileConfig.sourceFile))
             .map(this::readCountry)
             .collect(toList())
     }
